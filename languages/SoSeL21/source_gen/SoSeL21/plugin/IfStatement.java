@@ -46,18 +46,20 @@ public class IfStatement {
       if ((SLinkOperations.getTarget(stmt, LINKS.else$IzMC) != null)) {
         SNode el = SLinkOperations.getTarget(stmt, LINKS.else$IzMC);
         while ((el != null)) {
-          if (SNodeOperations.getConcept(SLinkOperations.getTarget(stmt, LINKS.else$IzMC)).getConceptAlias() == "elseif") {
+          if (SNodeOperations.getConcept(el).getConceptAlias() == "elseif") {
             Expression eElse = new Expression(SLinkOperations.getTarget(el, LINKS.cond$KSaJ));
             String condResult = eElse.getResult();
             LoggingRuntime.logMsgView(Level.INFO, "elseif cond: " + condResult, IfStatement.class, null, null);
             if (Boolean.parseBoolean(condResult)) {
               parseBody(SLinkOperations.getChildren(el, LINKS.body$n5xF));
+              el = null;
             } else {
-              el = SLinkOperations.getTarget(el, LINKS.else$5q1R);
+              el = (SNode) SLinkOperations.getTarget(el, LINKS.else$5q1R);
             }
           } else {
             LoggingRuntime.logMsgView(Level.INFO, "else cond true ", IfStatement.class, null, null);
             parseBody(SLinkOperations.getChildren(el, LINKS.body$n5xF));
+            el = null;
           }
         }
       }

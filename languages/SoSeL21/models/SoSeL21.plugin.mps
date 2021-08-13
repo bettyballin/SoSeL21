@@ -47,6 +47,7 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
         <child id="1070534934091" name="type" index="10QFUM" />
@@ -1700,6 +1701,14 @@
                                   </node>
                                 </node>
                               </node>
+                              <node concept="3clFbF" id="6m95mcLi1H2" role="3cqZAp">
+                                <node concept="37vLTI" id="6m95mcLi1H3" role="3clFbG">
+                                  <node concept="10Nm6u" id="6m95mcLi1H4" role="37vLTx" />
+                                  <node concept="37vLTw" id="6m95mcLi1H5" role="37vLTJ">
+                                    <ref role="3cqZAo" node="220q4B0O_JA" resolve="el" />
+                                  </node>
+                                </node>
+                              </node>
                             </node>
                             <node concept="2YIFZM" id="220q4B0OCnz" role="3clFbw">
                               <ref role="37wK5l" to="wyt6:~Boolean.parseBoolean(java.lang.String)" resolve="parseBoolean" />
@@ -1768,6 +1777,14 @@
                                   <node concept="3Tsc0h" id="220q4B0PuSf" role="2OqNvi">
                                     <ref role="3TtcxE" to="tr2z:6DiY7NbZ3OY" resolve="body" />
                                   </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="3clFbF" id="6m95mcLgxoY" role="3cqZAp">
+                              <node concept="37vLTI" id="6m95mcLgxA6" role="3clFbG">
+                                <node concept="10Nm6u" id="6m95mcLgxBj" role="37vLTx" />
+                                <node concept="37vLTw" id="6m95mcLgxoW" role="37vLTJ">
+                                  <ref role="3cqZAo" node="220q4B0O_JA" resolve="el" />
                                 </node>
                               </node>
                             </node>

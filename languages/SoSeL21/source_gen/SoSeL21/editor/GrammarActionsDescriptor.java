@@ -759,6 +759,31 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           }.query(_context)));
         }
       }
+      {
+        boolean sideEnabled = false;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM;
+        sideEnabled |= _context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM;
+        if (sideEnabled) {
+          ListSequence.fromList(result).addSequence(Sequence.fromIterable(new Object() {
+            public Iterable<TransformationMenuItem> query(final TransformationMenuContext _context) {
+              _context.getEditorMenuTrace().pushTraceInfo();
+              _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.optional in " + "ElseIfStatement", new SNodePointer("r:cd73f1d4-bc01-4075-b956-fe7c8e7e4547(SoSeL21.editor)", "7316402585415169920")));
+              try {
+                SNode sourceNode = _context.getNode();
+                if (!(SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.ElseIfStatement$8X))) {
+                  return Sequence.fromIterable(Collections.<TransformationMenuItem>emptyList());
+                }
+                SNode parentNode = SNodeOperations.cast(sourceNode, CONCEPTS.ElseIfStatement$8X);
+                final SContainmentLink link = LINKS.else$5q1R;
+                SNode currentChild = SLinkOperations.getTarget(parentNode, LINKS.else$5q1R);
+                return new SubstituteItemsCollector(parentNode, currentChild, link, _context.getEditorContext(), null).collect();
+              } finally {
+                _context.getEditorMenuTrace().popTraceInfo();
+              }
+            }
+          }.query(_context)));
+        }
+      }
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();
     }
@@ -1031,6 +1056,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SConcept ArbitraryTextAnnotation$hv = MetaAdapterFactory.getConcept(0xb4f35ed845af4efaL, 0xabe400ac26956e69L, 0x468dcccb641e8fb9L, "com.mbeddr.mpsutil.grammarcells.runtimelang.structure.ArbitraryTextAnnotation");
     /*package*/ static final SConcept ParensExpression$5H = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254a5371L, "SoSeL21.structure.ParensExpression");
     /*package*/ static final SConcept IfStatement$tK = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c8da65eL, "SoSeL21.structure.IfStatement");
+    /*package*/ static final SConcept ElseIfStatement$8X = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c98656fL, "SoSeL21.structure.ElseIfStatement");
   }
 
   private static final class LINKS {
@@ -1038,6 +1064,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
     /*package*/ static final SContainmentLink right$4iAC = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x17b38e97ea60c54bL, 0x554824d49f380903L, "right");
     /*package*/ static final SContainmentLink type$Kukc = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c582bL, 0x1b9245d5b72b7bb7L, "type");
     /*package*/ static final SContainmentLink else$IzMC = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c8da65eL, 0x3d238acb0c8da6fdL, "else");
+    /*package*/ static final SContainmentLink else$5q1R = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c98656fL, 0x6a52f87ccbe8cb20L, "else");
     /*package*/ static final SContainmentLink exp$vTvY = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254a5371L, 0x7f8c5814254c57b1L, "exp");
   }
 }

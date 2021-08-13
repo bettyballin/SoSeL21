@@ -347,5 +347,28 @@
       <ref role="20lvS9" node="3kSO7WaLl8O" resolve="Statement" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6m95mcLqUZV">
+    <property role="EcuMT" value="7316402585415167995" />
+    <property role="TrG5h" value="WhileStatement" />
+    <property role="34LRSv" value="while" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6m95mcLqVdC" role="1TKVEi">
+      <property role="IQ2ns" value="7316402585415168872" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="cond" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1uNzDvEniKM" resolve="MyExpression" />
+    </node>
+    <node concept="1TJgyj" id="6m95mcLqVdD" role="1TKVEi">
+      <property role="IQ2ns" value="7316402585415168873" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="body" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3kSO7WaLl8O" resolve="Statement" />
+    </node>
+    <node concept="PrWs8" id="6m95mcLqVdG" role="PzmwI">
+      <ref role="PrY4T" node="3kSO7WaLl8O" resolve="Statement" />
+    </node>
+  </node>
 </model>
 

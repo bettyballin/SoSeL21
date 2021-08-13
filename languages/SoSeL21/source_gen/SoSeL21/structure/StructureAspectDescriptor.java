@@ -40,6 +40,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptType = createDescriptorForType();
   /*package*/ final ConceptDescriptor myConceptVariableDeclaration = createDescriptorForVariableDeclaration();
   /*package*/ final ConceptDescriptor myConceptVariableReference = createDescriptorForVariableReference();
+  /*package*/ final ConceptDescriptor myConceptWhileStatement = createDescriptorForWhileStatement();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -54,7 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAddStatement, myConceptBinaryArithmeticExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanLiteral, myConceptBooleanType, myConceptDivideStatement, myConceptElseIfStatement, myConceptElseStatement, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpressionStatement, myConceptGreaterExpression, myConceptIElseStatement, myConceptIfStatement, myConceptIntegerType, myConceptLessExpression, myConceptMultiplyStatement, myConceptMyExpression, myConceptNumberLiteral, myConceptParensExpression, myConceptSoSeWorksheet, myConceptStatement, myConceptSubtractStatement, myConceptType, myConceptVariableDeclaration, myConceptVariableReference);
+    return Arrays.asList(myConceptAddStatement, myConceptBinaryArithmeticExpression, myConceptBinaryComparisonExpression, myConceptBinaryExpression, myConceptBooleanLiteral, myConceptBooleanType, myConceptDivideStatement, myConceptElseIfStatement, myConceptElseStatement, myConceptEmptyStatement, myConceptEqualExpression, myConceptExpressionStatement, myConceptGreaterExpression, myConceptIElseStatement, myConceptIfStatement, myConceptIntegerType, myConceptLessExpression, myConceptMultiplyStatement, myConceptMyExpression, myConceptNumberLiteral, myConceptParensExpression, myConceptSoSeWorksheet, myConceptStatement, myConceptSubtractStatement, myConceptType, myConceptVariableDeclaration, myConceptVariableReference, myConceptWhileStatement);
   }
 
   @Override
@@ -115,6 +116,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptVariableDeclaration;
       case LanguageConceptSwitch.VariableReference:
         return myConceptVariableReference;
+      case LanguageConceptSwitch.WhileStatement:
+        return myConceptWhileStatement;
       default:
         return null;
     }
@@ -376,6 +379,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.associate("target", 0x3538d07f0ac55607L).target(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c582bL).optional(false).origin("3835044326766106119").done();
     b.alias("ref");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForWhileStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("SoSeL21", "WhileStatement", 0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL);
+    b.class_(false, false, false);
+    b.parent(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55234L);
+    b.origin("r:41356c12-1c7b-423e-808b-cd90289b00e7(SoSeL21.structure)/7316402585415167995");
+    b.version(2);
+    b.aggregate("cond", 0x65891563316bb368L).target(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x17b38e97ea5d2c32L).optional(false).ordered(true).multiple(false).origin("7316402585415168872").done();
+    b.aggregate("body", 0x65891563316bb369L).target(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55234L).optional(true).ordered(true).multiple(true).origin("7316402585415168873").done();
+    b.alias("while");
     return b.create();
   }
 }

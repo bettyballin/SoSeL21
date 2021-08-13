@@ -36,6 +36,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Type;
   private ConceptPresentation props_VariableDeclaration;
   private ConceptPresentation props_VariableReference;
+  private ConceptPresentation props_WhileStatement;
 
   @Override
   @Nullable
@@ -228,6 +229,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VariableReference = cpb.create();
         }
         return props_VariableReference;
+      case LanguageConceptSwitch.WhileStatement:
+        if (props_WhileStatement == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_WhileStatement = cpb.create();
+        }
+        return props_WhileStatement;
     }
     return null;
   }
