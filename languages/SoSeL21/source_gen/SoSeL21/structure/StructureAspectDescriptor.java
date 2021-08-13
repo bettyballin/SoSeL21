@@ -428,6 +428,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:41356c12-1c7b-423e-808b-cd90289b00e7(SoSeL21.structure)/1986727169827449999");
     b.version(2);
+    b.alias("type");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVariableAssignment() {

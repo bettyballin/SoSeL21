@@ -252,7 +252,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Type:
         if (props_Type == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Type");
+          cpb.rawPresentation("type");
           props_Type = cpb.create();
         }
         return props_Type;

@@ -254,6 +254,7 @@
   <node concept="1TIwiD" id="1IihtmRbEMf">
     <property role="EcuMT" value="1986727169827449999" />
     <property role="TrG5h" value="Type" />
+    <property role="34LRSv" value="type" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="1IihtmRd6gP">
@@ -431,7 +432,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="counter" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6m95mcLsIV$" resolve="VariableAssignment" />
+      <ref role="20lvS9" node="1uNzDvEniKM" resolve="MyExpression" />
     </node>
     <node concept="1TJgyj" id="6m95mcLuw6V" role="1TKVEi">
       <property role="IQ2ns" value="7316402585416106427" />

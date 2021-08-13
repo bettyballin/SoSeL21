@@ -236,6 +236,12 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="58zW_gv3a3B" role="13h7CS">
+      <property role="TrG5h" value="getScope" />
+      <node concept="3Tm1VV" id="58zW_gv3a3C" role="1B3o_S" />
+      <node concept="10Oyi0" id="58zW_gv3ajE" role="3clF45" />
+      <node concept="3clFbS" id="58zW_gv3a3E" role="3clF47" />
+    </node>
     <node concept="13i0hz" id="6m95mcM8pCU" role="13h7CS">
       <property role="TrG5h" value="checkValidReferences" />
       <node concept="3Tm1VV" id="6m95mcM8pCV" role="1B3o_S" />

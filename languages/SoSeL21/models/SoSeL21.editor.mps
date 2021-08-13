@@ -168,7 +168,6 @@
         <child id="1716599163375643751" name="right" index="drBAZ" />
       </concept>
       <concept id="2529749638821361488" name="com.mbeddr.mpsutil.grammarcells.structure.DisableComponentInline" flags="ng" index="2jxsUO" />
-      <concept id="3921456275305506524" name="com.mbeddr.mpsutil.grammarcells.structure.ITokenizer" flags="ng" index="2lD6_C" />
       <concept id="3921456275302774825" name="com.mbeddr.mpsutil.grammarcells.structure.SplittableCell" flags="sg" stub="3921456275302774831" index="2lNzut">
         <child id="3921456275305506525" name="tokenizer" index="2lD6_D" />
       </concept>
@@ -1055,39 +1054,10 @@
           <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
         </node>
         <node concept="3F0ifn" id="6m95mcLuvX1" role="3EZMnx">
-          <property role="3F0ifm" value="(" />
+          <property role="3F0ifm" value="( " />
         </node>
-        <node concept="3EZMnI" id="6m95mcMQicD" role="3EZMnx">
-          <node concept="VPM3Z" id="6m95mcMQicH" role="3F10Kt" />
-          <node concept="1iCGBv" id="6m95mcMQidj" role="3EZMnx">
-            <ref role="1NtTu8" to="tr2z:6m95mcLuvWg" resolve="var" />
-            <node concept="1sVBvm" id="6m95mcMQidl" role="1sWHZn">
-              <node concept="3F1sOY" id="6m95mcMQids" role="2wV5jI">
-                <ref role="1NtTu8" to="tr2z:1IihtmRaRIR" resolve="type" />
-              </node>
-            </node>
-          </node>
-          <node concept="1iCGBv" id="6m95mcMTBeB" role="3EZMnx">
-            <ref role="1NtTu8" to="tr2z:6m95mcLuvWg" resolve="var" />
-            <node concept="1sVBvm" id="6m95mcMTBeE" role="1sWHZn">
-              <node concept="2lNzut" id="6m95mcMTBdx" role="2wV5jI">
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-                <node concept="2lD6_C" id="6m95mcMTBdz" role="2lD6_D" />
-              </node>
-            </node>
-          </node>
-          <node concept="3F0ifn" id="6m95mcMQid6" role="3EZMnx">
-            <property role="3F0ifm" value="=" />
-          </node>
-          <node concept="1iCGBv" id="6m95mcMQiev" role="3EZMnx">
-            <ref role="1NtTu8" to="tr2z:6m95mcLuvWg" resolve="var" />
-            <node concept="1sVBvm" id="6m95mcMQiex" role="1sWHZn">
-              <node concept="3F1sOY" id="6m95mcMQieK" role="2wV5jI">
-                <ref role="1NtTu8" to="tr2z:7Ycm1g_j5xi" resolve="initializer" />
-              </node>
-            </node>
-          </node>
-          <node concept="l2Vlx" id="6m95mcMQicM" role="2iSdaV" />
+        <node concept="3F1sOY" id="58zW_guXUtT" role="3EZMnx">
+          <ref role="1NtTu8" to="tr2z:6m95mcLuvWg" resolve="var" />
         </node>
         <node concept="3F0ifn" id="6m95mcLuvXi" role="3EZMnx">
           <property role="3F0ifm" value=";" />
