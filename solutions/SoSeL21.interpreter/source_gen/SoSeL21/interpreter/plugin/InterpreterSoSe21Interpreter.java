@@ -12,7 +12,7 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import SoSeL21.plugin.IfStatement;
+import SoSeL21.plugin.ConditionStatement;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
@@ -36,7 +36,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          IfStatement s = new IfStatement(node);
+          ConditionStatement s = new ConditionStatement(node);
           return s.getResult();
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -90,28 +90,29 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ExpressionStatement$ok, "r:17b3d5c1-9762-4072-81cd-8ef415e4e367(SoSeL21.interpreter.plugin)/7316402585413214905", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.WhileStatement$c7, "r:17b3d5c1-9762-4072-81cd-8ef415e4e367(SoSeL21.interpreter.plugin)/7316402585436085224", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          return "hello";
+          ConditionStatement s = new ConditionStatement(node);
+          return s.getResult();
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("expression()", node, ex, trace);
+          throw new InterpreterRuntimeException("while()", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("ExpressionStatement");
+        return new EvaluatorInfo("WhileStatement");
       }
 
       @Override
       public String toString() {
-        return "ExpressionStatement";
+        return "WhileStatement";
       }
 
       @Override
@@ -133,6 +134,6 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept IfStatement$tK = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c8da65eL, "SoSeL21.structure.IfStatement");
     /*package*/ static final SInterfaceConcept MyExpression$hK = MetaAdapterFactory.getInterfaceConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x17b38e97ea5d2c32L, "SoSeL21.structure.MyExpression");
-    /*package*/ static final SConcept ExpressionStatement$ok = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c57fcL, "SoSeL21.structure.ExpressionStatement");
+    /*package*/ static final SConcept WhileStatement$c7 = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, "SoSeL21.structure.WhileStatement");
   }
 }

@@ -20,13 +20,13 @@ import jetbrains.mps.smodel.SNodeUtil;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-public class IfStatement {
-  private static final Logger LOG = LogManager.getLogger(IfStatement.class);
+public class ConditionStatement {
+  private static final Logger LOG = LogManager.getLogger(ConditionStatement.class);
   public static SNode Statement = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL, "jetbrains.mps.lang.core.structure.BaseConcept"));
   public static SNode myStatement;
   private List<String> results;
 
-  public IfStatement(SNode s) {
+  public ConditionStatement(SNode s) {
     myStatement = SNodeOperations.copyNode(s);
     results = ListSequence.fromList(new ArrayList<String>());
   }
@@ -37,49 +37,68 @@ public class IfStatement {
   }
 
   private void getValue(SNode stmt) {
-    Expression e = new Expression(SLinkOperations.getTarget(stmt, LINKS.cond$u4XA));
-    String expResult = e.getResult();
-    if (Boolean.parseBoolean(expResult)) {
-      LoggingRuntime.logMsgView(Level.INFO, "if is true", IfStatement.class, null, null);
-      parseBody(SLinkOperations.getChildren(stmt, LINKS.body$FgR_));
-    } else {
-      if ((SLinkOperations.getTarget(stmt, LINKS.else$IzMC) != null)) {
-        SNode el = SLinkOperations.getTarget(stmt, LINKS.else$IzMC);
-        while ((el != null)) {
-          if (SNodeOperations.getConcept(el).getConceptAlias() == "elseif") {
-            Expression eElse = new Expression(SLinkOperations.getTarget(el, LINKS.cond$KSaJ));
-            String condResult = eElse.getResult();
-            LoggingRuntime.logMsgView(Level.INFO, "elseif cond: " + condResult, IfStatement.class, null, null);
-            if (Boolean.parseBoolean(condResult)) {
+    if (SNodeOperations.getConcept(stmt).getConceptAlias() == "if") {
+      SNode i = (SNode) stmt;
+      Expression e = new Expression(SLinkOperations.getTarget(i, LINKS.cond$u4XA));
+      String expResult = e.getResult();
+      if (Boolean.parseBoolean(expResult)) {
+        LoggingRuntime.logMsgView(Level.INFO, "if is true", ConditionStatement.class, null, null);
+        parseBody(SLinkOperations.getChildren(i, LINKS.body$FgR_));
+      } else {
+        if ((SLinkOperations.getTarget(i, LINKS.else$IzMC) != null)) {
+          SNode el = SLinkOperations.getTarget(i, LINKS.else$IzMC);
+          while ((el != null)) {
+            if (SNodeOperations.getConcept(el).getConceptAlias() == "elseif") {
+              Expression eElse = new Expression(SLinkOperations.getTarget(el, LINKS.cond$KSaJ));
+              String condResult = eElse.getResult();
+              LoggingRuntime.logMsgView(Level.INFO, "elseif cond: " + condResult, ConditionStatement.class, null, null);
+              if (Boolean.parseBoolean(condResult)) {
+                parseBody(SLinkOperations.getChildren(el, LINKS.body$n5xF));
+                el = null;
+              } else {
+                el = (SNode) SLinkOperations.getTarget(el, LINKS.else$5q1R);
+              }
+            } else {
+              LoggingRuntime.logMsgView(Level.INFO, "else cond true ", ConditionStatement.class, null, null);
               parseBody(SLinkOperations.getChildren(el, LINKS.body$n5xF));
               el = null;
-            } else {
-              el = (SNode) SLinkOperations.getTarget(el, LINKS.else$5q1R);
             }
-          } else {
-            LoggingRuntime.logMsgView(Level.INFO, "else cond true ", IfStatement.class, null, null);
-            parseBody(SLinkOperations.getChildren(el, LINKS.body$n5xF));
-            el = null;
           }
         }
       }
+
+    } else if (SNodeOperations.getConcept(stmt).getConceptAlias() == "while") {
+      SNode w = (SNode) stmt;
+      String wResult = "false";
+      int stopIter = 0;
+      do {
+        LoggingRuntime.logMsgView(Level.INFO, "while is true", ConditionStatement.class, null, null);
+        Expression e = new Expression(SLinkOperations.getTarget(w, LINKS.cond$VSgw));
+        wResult = e.getResult();
+        parseBody(SLinkOperations.getChildren(w, LINKS.body$VSvx));
+        stopIter++;
+      } while (Boolean.parseBoolean(wResult) && stopIter < 10);
+      if (stopIter == 10) {
+        ListSequence.fromList(results).addElement("...");
+      }
     }
+
   }
 
   private void parseBody(Iterable<SNode> body) {
     for (SNode b : Sequence.fromIterable(body)) {
-      LoggingRuntime.logMsgView(Level.INFO, " " + SNodeUtil.getPresentation(b), IfStatement.class, null, null);
+      LoggingRuntime.logMsgView(Level.INFO, "for: " + SNodeUtil.getPresentation(b), ConditionStatement.class, null, null);
       if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(b)), CONCEPTS.ExpressionStatement$ok)) {
         SNode e2 = (SNode) b;
         Expression exp = new Expression(SLinkOperations.getTarget(e2, LINKS.exp$S2fA));
         String val = exp.getResult();
-        LoggingRuntime.logMsgView(Level.INFO, "val: " + val, IfStatement.class, null, null);
+        LoggingRuntime.logMsgView(Level.INFO, "val: " + val, ConditionStatement.class, null, null);
         ListSequence.fromList(results).addElement(val);
       } else if (SNodeOperations.getConcept(b).getConceptAlias() == "if") {
         SNode i = (SNode) b;
-        IfStatement s = new IfStatement(i);
+        ConditionStatement s = new ConditionStatement(i);
         String val = s.getResult();
-        LoggingRuntime.logMsgView(Level.INFO, "if val: " + val, IfStatement.class, null, null);
+        LoggingRuntime.logMsgView(Level.INFO, "if val: " + val, ConditionStatement.class, null, null);
         ListSequence.fromList(results).addElement(val);
       }
     }
@@ -92,6 +111,8 @@ public class IfStatement {
     /*package*/ static final SContainmentLink cond$KSaJ = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c98656fL, 0x3d238acb0ccce40bL, "cond");
     /*package*/ static final SContainmentLink body$n5xF = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x6a52f87ccbfc3d36L, 0x6a52f87ccbfc3d3eL, "body");
     /*package*/ static final SContainmentLink else$5q1R = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c98656fL, 0x6a52f87ccbe8cb20L, "else");
+    /*package*/ static final SContainmentLink cond$VSgw = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, 0x65891563316bb368L, "cond");
+    /*package*/ static final SContainmentLink body$VSvx = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, 0x65891563316bb369L, "body");
     /*package*/ static final SContainmentLink exp$S2fA = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c57fcL, 0x7f8c5814254c57ffL, "exp");
   }
 
