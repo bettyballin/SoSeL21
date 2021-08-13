@@ -7,53 +7,27 @@ import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor;
-import jetbrains.mps.internal.collections.runtime.ISelector;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SProperty;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class check_SoSeWorksheet_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
   public check_SoSeWorksheet_NonTypesystemRule() {
   }
   public void applyRule(final SNode wk, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    Iterable<String> refs = Sequence.fromIterable(SoSeWorksheet__BehaviorDescriptor.vars_id7Ycm1g_jZLT.invoke(wk)).select(new ISelector<SNode, String>() {
-      public String select(SNode it) {
-        return SPropertyOperations.getString(it, PROPS.name$MnvL);
-      }
-    });
-    if (Sequence.fromIterable(refs).count() != Sequence.fromIterable(refs).distinct().count()) {
-      {
-        final MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(wk, "There should be max 1 reference to each variable ", "r:69300e82-0e15-404d-87f2-8e5784afc430(SoSeL21.typesystem)", "1085895441599266777", null, errorTarget);
-      }
-    }
-
-    String[] seen = new String[Sequence.fromIterable(SoSeWorksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(wk)).count()];
-    int i = 0;
-    for (SNode e : SoSeWorksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(wk)) {
-      if (SPropertyOperations.getString(e, PROPS.name$MnvL) == null) {
-        SNode ref = (SNode) e;
-        if (!(Sequence.fromIterable(Sequence.fromArray(seen)).contains(SPropertyOperations.getString(SLinkOperations.getTarget(ref, LINKS.target$tH9_), PROPS.name$MnvL)))) {
-          {
-            final MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(wk, "You have to declare the variable first, then reference it: " + SPropertyOperations.getString(SLinkOperations.getTarget(ref, LINKS.target$tH9_), PROPS.name$MnvL), "r:69300e82-0e15-404d-87f2-8e5784afc430(SoSeL21.typesystem)", "1085895441596446032", null, errorTarget);
-          }
+    String[] checks = SoSeWorksheet__BehaviorDescriptor.checkValidReferences_id6m95mcM8pCU.invoke(wk);
+    for (String s : checks) {
+      if (s != null) {
+        {
+          final MessageTarget errorTarget = new NodeMessageTarget();
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(wk, "Invalid reference: " + s, "r:69300e82-0e15-404d-87f2-8e5784afc430(SoSeL21.typesystem)", "7316402585435634781", null, errorTarget);
         }
-      } else {
-        seen[i++] = SPropertyOperations.getString(e, PROPS.name$MnvL);
       }
     }
-
-
   }
   public SAbstractConcept getApplicableConcept() {
     return CONCEPTS.SoSeWorksheet$ly;
@@ -63,14 +37,6 @@ public class check_SoSeWorksheet_NonTypesystemRule extends AbstractNonTypesystem
   }
   public boolean overrides() {
     return false;
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SReferenceLink target$tH9_ = MetaAdapterFactory.getReferenceLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac5551eL, 0x3538d07f0ac55607L, "target");
   }
 
   private static final class CONCEPTS {

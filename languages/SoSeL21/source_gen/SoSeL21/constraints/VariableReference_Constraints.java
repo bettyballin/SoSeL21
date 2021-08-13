@@ -43,7 +43,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
           }
           @Override
           public Scope createScope(final ReferenceConstraintsContext _context) {
-            return ListScope.forNamedElements(SoSeWorksheet__BehaviorDescriptor.vars_id7Ycm1g_jZLT.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.SoSeWorksheet$ly, false, false)));
+            return ListScope.forNamedElements(SoSeWorksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.SoSeWorksheet$ly, false, false)));
           }
         };
       }

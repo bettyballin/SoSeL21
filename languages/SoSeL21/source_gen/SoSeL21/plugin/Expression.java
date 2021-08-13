@@ -69,6 +69,8 @@ public class Expression {
       case ">":
       case "==":
       case "<":
+      case "<=":
+      case ">=":
         return computeByOp(Integer.valueOf(left), Integer.valueOf(right), SNodeOperations.getConcept(expr).getConceptAlias());
       default:
         return "error";
@@ -106,6 +108,16 @@ public class Expression {
           return "true";
         }
         return "false";
+      case ">=":
+        if (a >= b) {
+          return "true";
+        }
+        return "false";
+      case "<=":
+        if (a <= b) {
+          return "true";
+        }
+        return "false";
       default:
         return "wrong operator: " + op;
     }
@@ -117,14 +129,14 @@ public class Expression {
       String rightAlias = SNodeOperations.getConcept(SLinkOperations.getTarget(((SNode) n), LINKS.right$4iAC)).getConceptAlias();
 
       if (!(leftAlias.isEmpty()) && !(rightAlias.isEmpty()) && (leftAlias == "+" || leftAlias == "-" || leftAlias == "*" || leftAlias == "/")) {
-        n = replaceNodeLeft(n, ((SNode) SLinkOperations.getTarget(((SNode) n), LINKS.left$6HrV)));
+        n = replaceNode(n, ((SNode) SLinkOperations.getTarget(((SNode) n), LINKS.left$6HrV)));
 
       }
     }
     return n;
   }
 
-  private SNode replaceNodeLeft(SNode old, SNode replace) {
+  private SNode replaceNode(SNode old, SNode replace) {
     SNode m;
     if (SNodeOperations.getConcept(old).getConceptAlias() == "*") {
       m = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x554824d49f2c6aadL, "SoSeL21.structure.MultiplyStatement"));
