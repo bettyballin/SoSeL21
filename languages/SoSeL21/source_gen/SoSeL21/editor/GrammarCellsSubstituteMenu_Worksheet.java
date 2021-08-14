@@ -18,15 +18,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_SoSeWorksheet extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_SoSeWorksheet() {
+public class GrammarCellsSubstituteMenu_Worksheet extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_Worksheet() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_iri7iq_a());
+    result.add(new GrammarCellsSubstituteMenuPart_lji015_a());
     return result;
   }
 
@@ -34,7 +34,7 @@ public class GrammarCellsSubstituteMenu_SoSeWorksheet extends SubstituteMenuBase
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "SoSeWorksheet", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "Worksheet", null));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +43,18 @@ public class GrammarCellsSubstituteMenu_SoSeWorksheet extends SubstituteMenuBase
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_iri7iq_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_lji015_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("525ac69d-0268-4eb4-9478-ecf995bf5927(SoSeL21)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.SoSeWorksheet$ly;
+      return CONCEPTS.Worksheet$ly;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept SoSeWorksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.SoSeWorksheet");
+    /*package*/ static final SConcept Worksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.Worksheet");
   }
 }

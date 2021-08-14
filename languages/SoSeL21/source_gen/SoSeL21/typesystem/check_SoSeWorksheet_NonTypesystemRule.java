@@ -7,7 +7,7 @@ import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor;
+import SoSeL21.behavior.Worksheet__BehaviorDescriptor;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -19,7 +19,7 @@ public class check_SoSeWorksheet_NonTypesystemRule extends AbstractNonTypesystem
   public check_SoSeWorksheet_NonTypesystemRule() {
   }
   public void applyRule(final SNode wk, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    String[] checks = SoSeWorksheet__BehaviorDescriptor.checkValidReferences_id6m95mcM8pCU.invoke(wk);
+    String[] checks = Worksheet__BehaviorDescriptor.checkValidReferences_id6m95mcM8pCU.invoke(wk);
     for (String s : checks) {
       if (s != null) {
         {
@@ -30,7 +30,7 @@ public class check_SoSeWorksheet_NonTypesystemRule extends AbstractNonTypesystem
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.SoSeWorksheet$ly;
+    return CONCEPTS.Worksheet$ly;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -40,6 +40,6 @@ public class check_SoSeWorksheet_NonTypesystemRule extends AbstractNonTypesystem
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept SoSeWorksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.SoSeWorksheet");
+    /*package*/ static final SConcept Worksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.Worksheet");
   }
 }

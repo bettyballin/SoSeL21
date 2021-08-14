@@ -28,8 +28,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
-public final class SoSeWorksheet__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.SoSeWorksheet");
+public final class Worksheet__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.Worksheet");
 
   public static final SMethod<Iterable<SNode>> vars_id7Ycm1g_jZLT = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("vars").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7Ycm1g_jZLT").build();
   public static final SMethod<Iterable<SNode>> stmts_id2DJNjyWk4$y = new SMethodBuilder<Iterable<SNode>>(new SJavaCompoundTypeImpl((Class<Iterable<SNode>>) ((Class) Object.class))).name("stmts").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2DJNjyWk4$y").build();
@@ -41,13 +41,13 @@ public final class SoSeWorksheet__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Iterable<SNode> vars_id7Ycm1g_jZLT(@NotNull SNode __thisNode__) {
-    return SNodeOperations.ofConcept(SLinkOperations.getChildren(__thisNode__, LINKS.contents$K0QA), CONCEPTS.VariableDeclaration$j6);
+    return SNodeOperations.ofConcept(SLinkOperations.getChildren(__thisNode__, LINKS.body$K0QA), CONCEPTS.VariableDeclaration$j6);
   }
   /*package*/ static Iterable<SNode> stmts_id2DJNjyWk4$y(@NotNull SNode __thisNode__) {
-    return SNodeOperations.ofConcept(SLinkOperations.getChildren(__thisNode__, LINKS.contents$K0QA), CONCEPTS.Statement$k5);
+    return SNodeOperations.ofConcept(SLinkOperations.getChildren(__thisNode__, LINKS.body$K0QA), CONCEPTS.Statement$k5);
   }
   /*package*/ static String[] checkValidReferences_id6m95mcM8pCU(@NotNull SNode __thisNode__) {
-    List<SNode> stmts = Sequence.fromIterable(SoSeWorksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(__thisNode__)).toListSequence();
+    List<SNode> stmts = Sequence.fromIterable(Worksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(__thisNode__)).toListSequence();
     String[] declarations = new String[stmts.size()];
     String[] checks = new String[stmts.size()];
 
@@ -67,7 +67,7 @@ public final class SoSeWorksheet__BehaviorDescriptor extends BaseBHDescriptor {
     return checks;
   }
 
-  /*package*/ SoSeWorksheet__BehaviorDescriptor() {
+  /*package*/ Worksheet__BehaviorDescriptor() {
   }
 
   @Override
@@ -118,7 +118,7 @@ public final class SoSeWorksheet__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink contents$K0QA = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, 0x3538d07f0ac5523aL, "contents");
+    /*package*/ static final SContainmentLink body$K0QA = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, 0x3538d07f0ac5523aL, "body");
     /*package*/ static final SContainmentLink exp$S2fA = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c57fcL, 0x7f8c5814254c57ffL, "exp");
     /*package*/ static final SReferenceLink target$tH9_ = MetaAdapterFactory.getReferenceLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac5551eL, 0x3538d07f0ac55607L, "target");
   }

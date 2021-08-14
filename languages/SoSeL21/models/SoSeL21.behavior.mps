@@ -183,7 +183,7 @@
     </language>
   </registry>
   <node concept="13h7C7" id="3kSO7WaLqBD">
-    <ref role="13h7C2" to="tr2z:3kSO7WaLl8R" resolve="SoSeWorksheet" />
+    <ref role="13h7C2" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
     <node concept="13i0hz" id="7Ycm1g_jZLT" role="13h7CS">
       <property role="TrG5h" value="vars" />
       <node concept="3Tm1VV" id="7Ycm1g_jZLU" role="1B3o_S" />
@@ -198,7 +198,7 @@
             <node concept="2OqwBi" id="7Ycm1g_jZM0" role="2Oq$k0">
               <node concept="13iPFW" id="7Ycm1g_jZM1" role="2Oq$k0" />
               <node concept="3Tsc0h" id="7Ycm1g_jZM2" role="2OqNvi">
-                <ref role="3TtcxE" to="tr2z:3kSO7WaLl8U" resolve="contents" />
+                <ref role="3TtcxE" to="tr2z:3kSO7WaLl8U" resolve="body" />
               </node>
             </node>
             <node concept="v3k3i" id="7Ycm1g_jZM3" role="2OqNvi">
@@ -224,7 +224,7 @@
             <node concept="2OqwBi" id="2DJNjyWk4OP" role="2Oq$k0">
               <node concept="13iPFW" id="2DJNjyWk4E5" role="2Oq$k0" />
               <node concept="3Tsc0h" id="2DJNjyWk4Zo" role="2OqNvi">
-                <ref role="3TtcxE" to="tr2z:3kSO7WaLl8U" resolve="contents" />
+                <ref role="3TtcxE" to="tr2z:3kSO7WaLl8U" resolve="body" />
               </node>
             </node>
             <node concept="v3k3i" id="2DJNjyWk82_" role="2OqNvi">
@@ -235,12 +235,6 @@
           </node>
         </node>
       </node>
-    </node>
-    <node concept="13i0hz" id="58zW_gv3a3B" role="13h7CS">
-      <property role="TrG5h" value="getScope" />
-      <node concept="3Tm1VV" id="58zW_gv3a3C" role="1B3o_S" />
-      <node concept="10Oyi0" id="58zW_gv3ajE" role="3clF45" />
-      <node concept="3clFbS" id="58zW_gv3a3E" role="3clF47" />
     </node>
     <node concept="13i0hz" id="6m95mcM8pCU" role="13h7CS">
       <property role="TrG5h" value="checkValidReferences" />

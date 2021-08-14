@@ -125,5 +125,56 @@
       </node>
     </node>
   </node>
+  <node concept="2S6QgY" id="4ul5DlawfvO">
+    <property role="TrG5h" value="InterpretStatement" />
+    <ref role="2ZfgGC" to="tr2z:3kSO7WaLl8O" resolve="Statement" />
+    <node concept="2S6ZIM" id="4ul5DlawfvP" role="2ZfVej">
+      <node concept="3clFbS" id="4ul5DlawfvQ" role="2VODD2">
+        <node concept="3clFbF" id="4ul5Dlawf$O" role="3cqZAp">
+          <node concept="Xl_RD" id="4ul5Dlawf$N" role="3clFbG">
+            <property role="Xl_RC" value="Interpret Statement" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="4ul5DlawfvR" role="2ZfgGD">
+      <node concept="3clFbS" id="4ul5DlawfvS" role="2VODD2">
+        <node concept="3cpWs8" id="4ul5DlawfLw" role="3cqZAp">
+          <node concept="3cpWsn" id="4ul5DlawfLx" role="3cpWs9">
+            <property role="TrG5h" value="eval" />
+            <node concept="2YIFZM" id="4ul5DlawfLy" role="33vP2m">
+              <ref role="1Pybhc" to="hli8:3Zw3zYddclh" resolve="EvalHelper" />
+              <ref role="37wK5l" to="hli8:3Zw3zYdddXl" resolve="eval" />
+              <node concept="2Sf5sV" id="4ul5DlawfLz" role="37wK5m" />
+            </node>
+            <node concept="17QB3L" id="4ul5DlawfL$" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="4ul5DlawfL_" role="3cqZAp">
+          <node concept="2YIFZM" id="4ul5DlawfLA" role="3clFbG">
+            <ref role="1Pybhc" to="jkm4:~Messages" resolve="Messages" />
+            <ref role="37wK5l" to="jkm4:~Messages.showInfoMessage(java.lang.String,java.lang.String)" resolve="showInfoMessage" />
+            <node concept="37vLTw" id="4ul5DlawfLB" role="37wK5m">
+              <ref role="3cqZAo" node="4ul5DlawfLx" resolve="eval" />
+            </node>
+            <node concept="Xl_RD" id="4ul5DlawfLC" role="37wK5m">
+              <property role="Xl_RC" value="Interpreted" />
+            </node>
+          </node>
+        </node>
+        <node concept="2xdQw9" id="4ul5DlawfLD" role="3cqZAp">
+          <property role="2xdLsb" value="h1akgim/info" />
+          <node concept="3cpWs3" id="4ul5DlawfLE" role="9lYJi">
+            <node concept="37vLTw" id="4ul5DlawfLF" role="3uHU7w">
+              <ref role="3cqZAo" node="4ul5DlawfLx" resolve="eval" />
+            </node>
+            <node concept="Xl_RD" id="4ul5DlawfLG" role="3uHU7B">
+              <property role="Xl_RC" value="Interpreted " />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

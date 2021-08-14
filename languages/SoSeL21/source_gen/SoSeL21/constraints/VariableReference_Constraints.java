@@ -14,7 +14,7 @@ import org.jetbrains.mps.openapi.model.SNodeReference;
 import jetbrains.mps.scope.Scope;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
 import jetbrains.mps.scope.ListScope;
-import SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor;
+import SoSeL21.behavior.Worksheet__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.HashMap;
 import jetbrains.mps.smodel.SNodePointer;
@@ -43,7 +43,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
           }
           @Override
           public Scope createScope(final ReferenceConstraintsContext _context) {
-            return ListScope.forNamedElements(SoSeWorksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.SoSeWorksheet$ly, false, false)));
+            return ListScope.forNamedElements(Worksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.Worksheet$ly, false, false)));
           }
         };
       }
@@ -56,7 +56,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept VariableReference$ds = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac5551eL, "SoSeL21.structure.VariableReference");
-    /*package*/ static final SConcept SoSeWorksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.SoSeWorksheet");
+    /*package*/ static final SConcept Worksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.Worksheet");
   }
 
   private static final class LINKS {

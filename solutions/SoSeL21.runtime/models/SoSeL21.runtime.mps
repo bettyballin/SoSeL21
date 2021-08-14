@@ -10,6 +10,7 @@
       <concept id="7661459130992573750" name="SoSeL21.structure.IElseStatement" flags="ng" index="2xFGla">
         <child id="7661459130992573758" name="body" index="2xFGl2" />
       </concept>
+      <concept id="1986727169827824693" name="SoSeL21.structure.BooleanType" flags="ng" index="2GDy7w" />
       <concept id="1986727169827238987" name="SoSeL21.structure.IntegerType" flags="ng" index="2GIj6u" />
       <concept id="4405517465192080990" name="SoSeL21.structure.IfStatement" flags="ng" index="LFyMl">
         <child id="4405517465192081149" name="else" index="LFyKQ" />
@@ -24,8 +25,8 @@
       <concept id="904179552600929912" name="SoSeL21.structure.NumberLiteral" flags="ng" index="TvRNV">
         <property id="1707865466827002857" name="value" index="3XOHPY" />
       </concept>
-      <concept id="3835044326766105143" name="SoSeL21.structure.SoSeWorksheet" flags="ng" index="ZZo98">
-        <child id="3835044326766105146" name="contents" index="ZZo95" />
+      <concept id="3835044326766105143" name="SoSeL21.structure.Worksheet" flags="ng" index="ZZo98">
+        <child id="3835044326766105146" name="body" index="ZZo95" />
       </concept>
       <concept id="3835044326766105886" name="SoSeL21.structure.VariableReference" flags="ng" index="ZZolx">
         <reference id="3835044326766106119" name="target" index="ZZopS" />
@@ -40,6 +41,15 @@
         <child id="7316402585416105746" name="cond" index="1kWeDL" />
         <child id="7316402585416105744" name="var" index="1kWeDN" />
         <child id="7316402585416105749" name="counter" index="1kWeDQ" />
+        <child id="7316402585416106427" name="body" index="1kWLjo" />
+      </concept>
+      <concept id="7316402585416107248" name="SoSeL21.structure.Param" flags="ng" index="1kWL6j">
+        <child id="7316402585416107251" name="type" index="1kWL6g" />
+      </concept>
+      <concept id="7316402585416107206" name="SoSeL21.structure.FunctionStatement" flags="ng" index="1kWL6_">
+        <child id="7316402585416107394" name="return" index="1kWL3x" />
+        <child id="7316402585416107234" name="body" index="1kWL61" />
+        <child id="7316402585416107225" name="params" index="1kWL6U" />
       </concept>
       <concept id="9190817783103646139" name="SoSeL21.structure.GreaterExpression" flags="ng" index="1qG36J" />
       <concept id="9190817783104690219" name="SoSeL21.structure.VariableDeclaration" flags="ng" index="1qK00Z">
@@ -193,31 +203,6 @@
         </node>
       </node>
     </node>
-    <node concept="1kWeDI" id="6m95mcMUpUe" role="ZZo95">
-      <node concept="1qK00Z" id="6m95mcMUpVB" role="1kWeDN">
-        <property role="TrG5h" value="i" />
-        <node concept="2GIj6u" id="6m95mcMUpV$" role="2GIjTy" />
-        <node concept="TvRNV" id="6m95mcMUpVI" role="1qK016">
-          <property role="3XOHPY" value="0" />
-        </node>
-      </node>
-      <node concept="1qK0YG" id="6m95mcMUpVX" role="1kWeDL">
-        <node concept="ZZolx" id="6m95mcMUpWi" role="3XOOJp">
-          <ref role="ZZopS" node="58zW_gv0hPb" resolve="i" />
-        </node>
-        <node concept="TvRNV" id="6m95mcMUpWa" role="3as2Rn">
-          <property role="3XOHPY" value="3" />
-        </node>
-      </node>
-      <node concept="3XNeND" id="58zW_guRORs" role="1kWeDQ">
-        <node concept="ZZolx" id="58zW_guRUdN" role="3XOOJp">
-          <ref role="ZZopS" node="58zW_gv0hPb" resolve="i" />
-        </node>
-        <node concept="TvRNV" id="58zW_guRUdU" role="3as2Rn">
-          <property role="3XOHPY" value="1" />
-        </node>
-      </node>
-    </node>
     <node concept="1qK00Z" id="58zW_gv0hPb" role="ZZo95">
       <property role="TrG5h" value="i" />
       <node concept="2GIj6u" id="58zW_gv0hP9" role="2GIjTy" />
@@ -237,28 +222,70 @@
         <ref role="ZZopS" node="58zW_gv38xK" resolve="i" />
       </node>
     </node>
-    <node concept="1kWeDI" id="58zW_gv1Tao" role="ZZo95">
-      <node concept="1qK00Z" id="58zW_gv1Taq" role="1kWeDN">
-        <property role="TrG5h" value="i" />
-        <node concept="2GIj6u" id="58zW_gv1Tc0" role="2GIjTy" />
-        <node concept="TvRNV" id="58zW_gv1Tcb" role="1qK016">
+    <node concept="1qK0ZC" id="4ul5Dlay8FE" role="ZZo95">
+      <node concept="1qK0YG" id="4ul5Dlay8Hq" role="1qK0ZF">
+        <node concept="ZZolx" id="4ul5Dlay8HP" role="3XOOJp">
+          <ref role="ZZopS" node="58zW_gv0hPb" resolve="i" />
+        </node>
+        <node concept="TvRNV" id="4ul5Dlay8HE" role="3as2Rn">
+          <property role="3XOHPY" value="3" />
+        </node>
+      </node>
+    </node>
+    <node concept="1kWeDI" id="4ul5Dlaqni1" role="ZZo95">
+      <node concept="1qK00Z" id="4ul5Dlaqni3" role="1kWeDN">
+        <property role="TrG5h" value="b" />
+        <node concept="2GIj6u" id="4ul5DlasoU9" role="2GIjTy" />
+        <node concept="TvRNV" id="4ul5DlasoU_" role="1qK016">
           <property role="3XOHPY" value="0" />
         </node>
       </node>
-      <node concept="1qK0YG" id="58zW_gv1Tcs" role="1kWeDL">
-        <node concept="TvRNV" id="58zW_gv1TcE" role="3as2Rn">
-          <property role="3XOHPY" value="3" />
+      <node concept="1qK0YG" id="4ul5DlasoUS" role="1kWeDL">
+        <node concept="ZZolx" id="4ul5Dlay8Io" role="3XOOJp">
+          <ref role="ZZopS" node="6m95mcLuvIc" resolve="b" />
         </node>
-        <node concept="ZZolx" id="58zW_gv1Tcn" role="3XOOJp">
-          <ref role="ZZopS" node="58zW_gv0hPb" resolve="i" />
+        <node concept="TvRNV" id="4ul5DlasoVe" role="3as2Rn">
+          <property role="3XOHPY" value="5" />
         </node>
       </node>
-      <node concept="3XNeND" id="58zW_gv2FWT" role="1kWeDQ">
-        <node concept="TvRNV" id="58zW_gv2FX4" role="3as2Rn">
+      <node concept="3XNeND" id="4ul5DlasoVt" role="1kWeDQ">
+        <node concept="ZZolx" id="4ul5Dlay8IV" role="3XOOJp">
+          <ref role="ZZopS" node="6m95mcLuvIc" resolve="b" />
+        </node>
+        <node concept="TvRNV" id="4ul5DlasoVP" role="3as2Rn">
           <property role="3XOHPY" value="1" />
         </node>
-        <node concept="ZZolx" id="58zW_gv2FWu" role="3XOOJp">
-          <ref role="ZZopS" node="58zW_gv0hPb" resolve="i" />
+      </node>
+      <node concept="1qK0ZC" id="4ul5Dlay8Ks" role="1kWLjo">
+        <node concept="3XNeND" id="4ul5Dlay8Lu" role="1qK0ZF">
+          <node concept="TvRNV" id="4ul5Dlay8M6" role="3as2Rn">
+            <property role="3XOHPY" value="3" />
+          </node>
+          <node concept="TvRNV" id="4ul5Dlay8KP" role="3XOOJp">
+            <property role="3XOHPY" value="3" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1kWL6_" id="4ul5Dla$1Le" role="ZZo95">
+      <property role="TrG5h" value="myFun" />
+      <node concept="2GDy7w" id="4ul5Dla$1Ng" role="1kWL3x" />
+      <node concept="1kWL6j" id="4ul5Dla$1N0" role="1kWL6U">
+        <property role="TrG5h" value="a" />
+        <node concept="2GIj6u" id="4ul5Dla$1N4" role="1kWL6g" />
+      </node>
+      <node concept="1kWL6j" id="4ul5Dla$1N7" role="1kWL6U">
+        <property role="TrG5h" value="b" />
+        <node concept="2GIj6u" id="4ul5Dla$1Nd" role="1kWL6g" />
+      </node>
+      <node concept="1qK0ZC" id="4ul5Dla$1Nj" role="1kWL61">
+        <node concept="1qK0YG" id="4ul5Dla$1Nx" role="1qK0ZF">
+          <node concept="ZZolx" id="4ul5Dla$1NQ" role="3XOOJp">
+            <ref role="ZZopS" node="6m95mcLi032" resolve="a" />
+          </node>
+          <node concept="ZZolx" id="4ul5Dla$1O5" role="3as2Rn">
+            <ref role="ZZopS" node="6m95mcLuvIc" resolve="b" />
+          </node>
         </node>
       </node>
     </node>

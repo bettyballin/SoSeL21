@@ -89,23 +89,23 @@
       </scope>
     </file>
     <file name="check_SoSeWorksheet_NonTypesystemRule.java">
-      <node id="7316402585435629741" at="21,115,22,102" concept="6" />
+      <node id="7316402585435629741" at="21,115,22,98" concept="6" />
       <node id="7316402585435634781" at="25,9,26,68" concept="6" />
       <node id="7316402585435634781" at="26,68,27,219" concept="6" />
-      <node id="314389951432068137" at="32,50,33,37" concept="7" />
+      <node id="314389951432068137" at="32,50,33,33" concept="7" />
       <node id="314389951432068137" at="35,68,36,102" concept="7" />
       <node id="314389951432068137" at="38,30,39,17" concept="7" />
-      <node id="314389951432068137" at="43,0,44,0" concept="8" trace="SoSeWorksheet$ly" />
+      <node id="314389951432068137" at="43,0,44,0" concept="8" trace="Worksheet$ly" />
       <node id="314389951432068137" at="19,0,21,0" concept="1" trace="check_SoSeWorksheet_NonTypesystemRule#()V" />
       <node id="314389951432068137" at="32,0,35,0" concept="5" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
       <node id="314389951432068137" at="35,0,38,0" concept="5" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
       <node id="314389951432068137" at="38,0,41,0" concept="5" trace="overrides#()Z" />
       <node id="7316402585435634781" at="24,22,28,9" concept="0" />
       <node id="7316402585435633588" at="23,29,29,7" concept="4" />
-      <node id="7316402585435631601" at="22,102,30,5" concept="3" />
+      <node id="7316402585435631601" at="22,98,30,5" concept="3" />
       <node id="314389951432068137" at="21,0,32,0" concept="5" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
       <scope id="314389951432068137" at="19,50,19,50" />
-      <scope id="314389951432068137" at="32,50,33,37" />
+      <scope id="314389951432068137" at="32,50,33,33" />
       <scope id="314389951432068137" at="35,68,36,102" />
       <scope id="314389951432068137" at="38,30,39,17" />
       <scope id="314389951432068137" at="19,0,21,0" />
@@ -120,7 +120,7 @@
       <scope id="314389951432068137" at="38,0,41,0" />
       <scope id="7316402585435633590" at="24,22,28,9" />
       <scope id="7316402585435631603" at="23,29,29,7" />
-      <scope id="7316402585435631601" at="22,102,30,5">
+      <scope id="7316402585435631601" at="22,98,30,5">
         <var name="s" id="7316402585435631604" />
       </scope>
       <scope id="314389951432068138" at="21,115,30,5">

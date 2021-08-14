@@ -43,7 +43,7 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
   </dependency>
   <dependency className="SoSeL21.typesystem.check_SoSeWorksheet_NonTypesystemRule">
-    <classNode dependClassName="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor" />
+    <classNode dependClassName="SoSeL21.behavior.Worksheet__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.errors.IErrorReporter" />
     <classNode dependClassName="jetbrains.mps.errors.messageTargets.MessageTarget" />

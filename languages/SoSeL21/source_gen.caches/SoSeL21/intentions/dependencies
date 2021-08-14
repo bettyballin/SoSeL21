@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="SoSeL21.intentions.IntentionsDescriptor">
     <classNode dependClassName="SoSeL21.intentions.InterpretExpression_Intention" />
+    <classNode dependClassName="SoSeL21.intentions.InterpretStatement_Intention" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="java.util.Collection" />
@@ -17,6 +18,27 @@
     <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionAspectDescriptor" />
   </dependency>
   <dependency className="SoSeL21.intentions.InterpretExpression_Intention">
+    <classNode dependClassName="SoSeL21.interpreter.plugin.EvalHelper" />
+    <classNode dependClassName="com.intellij.openapi.ui.Messages" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="java.util.Collections" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime" />
+    <classNode dependClassName="jetbrains.mps.intentions.AbstractIntentionExecutable" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionExecutable" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.Kind" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="org.apache.log4j.Level" />
+    <classNode dependClassName="org.apache.log4j.LogManager" />
+    <classNode dependClassName="org.apache.log4j.Logger" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.intentions.AbstractIntentionDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.openapi.intentions.IntentionFactory" />
+  </dependency>
+  <dependency className="SoSeL21.intentions.InterpretStatement_Intention">
     <classNode dependClassName="SoSeL21.interpreter.plugin.EvalHelper" />
     <classNode dependClassName="com.intellij.openapi.ui.Messages" />
     <classNode dependClassName="java.lang.Override" />

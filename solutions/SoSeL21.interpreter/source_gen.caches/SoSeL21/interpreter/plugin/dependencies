@@ -16,8 +16,8 @@
     <classNode extendsClassName="jetbrains.mps.smodel.structure.DefaultExtensionDescriptor" />
   </dependency>
   <dependency className="SoSeL21.interpreter.plugin.InterpreterSoSe21Interpreter">
-    <classNode dependClassName="SoSeL21.plugin.ConditionStatement" />
     <classNode dependClassName="SoSeL21.plugin.Expression" />
+    <classNode dependClassName="SoSeL21.plugin.Statement" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ComputationTrace" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.ConceptEvaluatorBase" />
     <classNode dependClassName="com.mbeddr.mpsutil.interpreter.rt.EvaluatorInfo" />

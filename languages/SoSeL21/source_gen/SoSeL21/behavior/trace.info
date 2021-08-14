@@ -18,16 +18,16 @@
     </file>
   </root>
   <root nodeRef="r:137866b5-5cd8-43ea-94f1-018dbc1dd9fa(SoSeL21.behavior)/3835044326766127593">
-    <file name="SoSeWorksheet__BehaviorDescriptor.java">
+    <file name="Worksheet__BehaviorDescriptor.java">
       <node id="3835044326766127593" at="32,0,33,0" concept="8" trace="CONCEPT" />
       <node id="3835044326766127593" at="34,0,35,0" concept="8" trace="vars_id7Ycm1g_jZLT" />
       <node id="3835044326766127593" at="35,0,36,0" concept="8" trace="stmts_id2DJNjyWk4$y" />
       <node id="3835044326766127593" at="36,0,37,0" concept="8" trace="checkValidReferences_id6m95mcM8pCU" />
       <node id="3835044326766127593" at="38,0,39,0" concept="8" trace="BH_METHODS" />
-      <node id="9190817783104928894" at="43,86,44,134" concept="6" />
-      <node id="3057888315569097350" at="46,87,47,124" concept="6" />
-      <node id="7316402585427089984" at="49,95,50,139" concept="5" />
-      <node id="7316402585427089988" at="50,139,51,53" concept="5" />
+      <node id="9190817783104928894" at="43,86,44,130" concept="6" />
+      <node id="3057888315569097350" at="46,87,47,120" concept="6" />
+      <node id="7316402585427089984" at="49,95,50,135" concept="5" />
+      <node id="7316402585427089988" at="50,135,51,53" concept="5" />
       <node id="7316402585432542397" at="51,53,52,47" concept="5" />
       <node id="7316402585432542216" at="52,47,53,0" concept="7" />
       <node id="7316402585427090003" at="55,117,56,69" concept="5" />
@@ -47,14 +47,14 @@
       <node id="3835044326766127593" at="103,14,104,58" concept="11" />
       <node id="3835044326766127593" at="110,48,111,22" concept="6" />
       <node id="3835044326766127593" at="116,40,117,19" concept="6" />
-      <node id="3835044326766127593" at="121,0,122,0" concept="8" trace="contents$K0QA" />
+      <node id="3835044326766127593" at="121,0,122,0" concept="8" trace="body$K0QA" />
       <node id="3835044326766127593" at="122,0,123,0" concept="8" trace="exp$S2fA" />
       <node id="3835044326766127593" at="123,0,124,0" concept="8" trace="target$tH9_" />
       <node id="3835044326766127593" at="127,0,128,0" concept="8" trace="VariableDeclaration$j6" />
       <node id="3835044326766127593" at="128,0,129,0" concept="8" trace="Statement$k5" />
       <node id="3835044326766127593" at="132,0,133,0" concept="8" trace="name$MnvL" />
       <node id="3835044326766127593" at="40,0,42,0" concept="9" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="3835044326766127593" at="70,0,72,0" concept="0" trace="SoSeWorksheet__BehaviorDescriptor#()V" />
+      <node id="3835044326766127593" at="70,0,72,0" concept="0" trace="Worksheet__BehaviorDescriptor#()V" />
       <node id="3835044326766127593" at="43,0,46,0" concept="9" trace="vars_id7Ycm1g_jZLT#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Iterable;" />
       <node id="3835044326766127593" at="46,0,49,0" concept="9" trace="stmts_id2DJNjyWk4$y#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Iterable;" />
       <node id="7316402585427090045" at="58,75,61,11" concept="3" />
@@ -72,9 +72,9 @@
       <node id="3835044326766127593" at="78,0,95,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="3835044326766127593" at="49,0,69,0" concept="9" trace="checkValidReferences_id6m95mcM8pCU#(Lorg/jetbrains/mps/openapi/model/SNode;)[Ljava/lang/String;" />
       <scope id="3835044326766127593" at="40,63,40,63" />
-      <scope id="3835044326766127593" at="70,51,70,51" />
-      <scope id="9190817783104928893" at="43,86,44,134" />
-      <scope id="3057888315569096997" at="46,87,47,124" />
+      <scope id="3835044326766127593" at="70,47,70,47" />
+      <scope id="9190817783104928893" at="43,86,44,130" />
+      <scope id="3057888315569096997" at="46,87,47,120" />
       <scope id="7316402585427090046" at="59,185,60,122" />
       <scope id="7316402585427090090" at="63,125,64,127" />
       <scope id="3835044326766127593" at="74,114,75,21" />
@@ -138,10 +138,10 @@
       <scope id="3835044326766127593" at="49,0,69,0">
         <var name="__thisNode__" id="3835044326766127593" />
       </scope>
-      <unit id="3835044326766127593" at="131,0,134,0" name="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor$PROPS" />
-      <unit id="3835044326766127593" at="126,0,130,0" name="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor$CONCEPTS" />
-      <unit id="3835044326766127593" at="120,0,125,0" name="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor$LINKS" />
-      <unit id="3835044326766127593" at="31,0,135,0" name="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor" />
+      <unit id="3835044326766127593" at="131,0,134,0" name="SoSeL21.behavior.Worksheet__BehaviorDescriptor$PROPS" />
+      <unit id="3835044326766127593" at="126,0,130,0" name="SoSeL21.behavior.Worksheet__BehaviorDescriptor$CONCEPTS" />
+      <unit id="3835044326766127593" at="120,0,125,0" name="SoSeL21.behavior.Worksheet__BehaviorDescriptor$LINKS" />
+      <unit id="3835044326766127593" at="31,0,135,0" name="SoSeL21.behavior.Worksheet__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

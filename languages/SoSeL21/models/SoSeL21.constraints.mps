@@ -83,7 +83,7 @@
                   <node concept="2Xjw5R" id="hsVZV04DzA" role="2OqNvi">
                     <node concept="1xMEDy" id="hsVZV04DzB" role="1xVPHs">
                       <node concept="chp4Y" id="hsVZV04DzC" role="ri$Ld">
-                        <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="SoSeWorksheet" />
+                        <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
                       </node>
                     </node>
                   </node>

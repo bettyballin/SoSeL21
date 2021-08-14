@@ -69,7 +69,7 @@
   </node>
   <node concept="1TIwiD" id="3kSO7WaLl8R">
     <property role="EcuMT" value="3835044326766105143" />
-    <property role="TrG5h" value="SoSeWorksheet" />
+    <property role="TrG5h" value="Worksheet" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Worksheet" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -79,7 +79,7 @@
     <node concept="1TJgyj" id="3kSO7WaLl8U" role="1TKVEi">
       <property role="IQ2ns" value="3835044326766105146" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="contents" />
+      <property role="20kJfa" value="body" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3kSO7WaLl8O" resolve="Statement" />
     </node>
@@ -254,7 +254,7 @@
   <node concept="1TIwiD" id="1IihtmRbEMf">
     <property role="EcuMT" value="1986727169827449999" />
     <property role="TrG5h" value="Type" />
-    <property role="34LRSv" value="type" />
+    <property role="34LRSv" value="T" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="1IihtmRd6gP">
@@ -444,7 +444,7 @@
   </node>
   <node concept="1TIwiD" id="6m95mcLuwj6">
     <property role="EcuMT" value="7316402585416107206" />
-    <property role="TrG5h" value="Function" />
+    <property role="TrG5h" value="FunctionStatement" />
     <property role="34LRSv" value="fun" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6m95mcLuwj7" role="PzmwI">

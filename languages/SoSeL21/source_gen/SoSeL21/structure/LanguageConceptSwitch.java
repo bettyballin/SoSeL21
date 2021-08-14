@@ -22,7 +22,7 @@ public final class LanguageConceptSwitch {
   public static final int EqualExpression = 10;
   public static final int ExpressionStatement = 11;
   public static final int ForStatement = 12;
-  public static final int Function = 13;
+  public static final int FunctionStatement = 13;
   public static final int GreaterEqualExpression = 14;
   public static final int GreaterExpression = 15;
   public static final int IElseStatement = 16;
@@ -35,14 +35,14 @@ public final class LanguageConceptSwitch {
   public static final int NumberLiteral = 23;
   public static final int Param = 24;
   public static final int ParensExpression = 25;
-  public static final int SoSeWorksheet = 26;
-  public static final int Statement = 27;
-  public static final int SubtractStatement = 28;
-  public static final int Type = 29;
-  public static final int VariableAssignment = 30;
-  public static final int VariableDeclaration = 31;
-  public static final int VariableReference = 32;
-  public static final int WhileStatement = 33;
+  public static final int Statement = 26;
+  public static final int SubtractStatement = 27;
+  public static final int Type = 28;
+  public static final int VariableAssignment = 29;
+  public static final int VariableDeclaration = 30;
+  public static final int VariableReference = 31;
+  public static final int WhileStatement = 32;
+  public static final int Worksheet = 33;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x525ac69d02684eb4L, 0x9478ecf995bf5927L);
@@ -59,7 +59,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7f8c5814254c57ccL, EqualExpression);
     builder.put(0x7f8c5814254c57fcL, ExpressionStatement);
     builder.put(0x658915633179ff0dL, ForStatement);
-    builder.put(0x65891563317a04c6L, Function);
+    builder.put(0x65891563317a04c6L, FunctionStatement);
     builder.put(0x65891563316f8e0cL, GreaterEqualExpression);
     builder.put(0x7f8c5814253c69bbL, GreaterExpression);
     builder.put(0x6a52f87ccbfc3d36L, IElseStatement);
@@ -72,7 +72,6 @@ public final class LanguageConceptSwitch {
     builder.put(0xc8c4a8335f33678L, NumberLiteral);
     builder.put(0x65891563317a04f0L, Param);
     builder.put(0x7f8c5814254a5371L, ParensExpression);
-    builder.put(0x3538d07f0ac55237L, SoSeWorksheet);
     builder.put(0x3538d07f0ac55234L, Statement);
     builder.put(0x17b38e97ea80e42cL, SubtractStatement);
     builder.put(0x1b9245d5b72eac8fL, Type);
@@ -80,6 +79,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7f8c5814254c582bL, VariableDeclaration);
     builder.put(0x3538d07f0ac5551eL, VariableReference);
     builder.put(0x65891563316baffbL, WhileStatement);
+    builder.put(0x3538d07f0ac55237L, Worksheet);
     myIndex = builder.seal();
   }
 

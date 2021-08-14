@@ -504,6 +504,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createReadOnlyModelAccessor_0() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
       public String getText() {
+        if (SNodeOperations.getConcept(SNodeOperations.getParent(myNode)).getConceptAlias() == "for") {
+          return "";
+        }
         String eval = "value: ";
         eval += EvalHelper.eval(SLinkOperations.getTarget(myNode, LINKS.initializer$VrMu));
         return eval;

@@ -173,7 +173,7 @@
     </node>
     <node concept="1YaCAy" id="hsVZV03SKG" role="1YuTPh">
       <property role="TrG5h" value="wk" />
-      <ref role="1YaFvo" to="tr2z:3kSO7WaLl8R" resolve="SoSeWorksheet" />
+      <ref role="1YaFvo" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
     </node>
   </node>
   <node concept="18kY7G" id="1IihtmRg49W">

@@ -8,7 +8,7 @@ import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
-import SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor;
+import SoSeL21.behavior.Worksheet__BehaviorDescriptor;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.SourceNodesQuery;
 import java.util.HashMap;
@@ -34,7 +34,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Iterable<SNode> sourceNodesQuery_1_0(final SourceSubstituteMacroNodesContext _context) {
-    return (Iterable<SNode>) SoSeWorksheet__BehaviorDescriptor.vars_id7Ycm1g_jZLT.invoke(_context.getNode());
+    return (Iterable<SNode>) Worksheet__BehaviorDescriptor.vars_id7Ycm1g_jZLT.invoke(_context.getNode());
   }
   private final Map<String, SourceNodesQuery> snsqMethods = new HashMap<String, SourceNodesQuery>();
   {

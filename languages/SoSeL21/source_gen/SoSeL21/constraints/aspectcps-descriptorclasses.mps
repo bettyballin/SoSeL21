@@ -542,7 +542,7 @@
                                             <node concept="1xMEDy" id="1P" role="1xVPHs">
                                               <uo k="s:originTrace" v="n:314389951432268007" />
                                               <node concept="chp4Y" id="1Q" role="ri$Ld">
-                                                <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="SoSeWorksheet" />
+                                                <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
                                                 <uo k="s:originTrace" v="n:314389951432268008" />
                                               </node>
                                             </node>

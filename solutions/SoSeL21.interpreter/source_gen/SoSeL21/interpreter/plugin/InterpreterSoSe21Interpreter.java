@@ -12,7 +12,7 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import SoSeL21.plugin.ConditionStatement;
+import SoSeL21.plugin.Statement;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
@@ -36,7 +36,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          ConditionStatement s = new ConditionStatement(node);
+          Statement s = new Statement(node);
           return s.getResult();
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -96,7 +96,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          ConditionStatement s = new ConditionStatement(node);
+          Statement s = new Statement(node);
           return s.getResult();
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -120,6 +120,36 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ForStatement$4F, "r:17b3d5c1-9762-4072-81cd-8ef415e4e367(SoSeL21.interpreter.plugin)/5918840778406937202", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          Statement s = new Statement(node);
+          return s.getResult();
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("for()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("ForStatement");
+      }
+
+      @Override
+      public String toString() {
+        return "ForStatement";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
   }
 
 
@@ -135,5 +165,6 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
     /*package*/ static final SConcept IfStatement$tK = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c8da65eL, "SoSeL21.structure.IfStatement");
     /*package*/ static final SInterfaceConcept MyExpression$hK = MetaAdapterFactory.getInterfaceConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x17b38e97ea5d2c32L, "SoSeL21.structure.MyExpression");
     /*package*/ static final SConcept WhileStatement$c7 = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, "SoSeL21.structure.WhileStatement");
+    /*package*/ static final SConcept ForStatement$4F = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x658915633179ff0dL, "SoSeL21.structure.ForStatement");
   }
 }

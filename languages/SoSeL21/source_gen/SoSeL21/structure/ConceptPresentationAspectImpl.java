@@ -22,7 +22,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EqualExpression;
   private ConceptPresentation props_ExpressionStatement;
   private ConceptPresentation props_ForStatement;
-  private ConceptPresentation props_Function;
+  private ConceptPresentation props_FunctionStatement;
   private ConceptPresentation props_GreaterEqualExpression;
   private ConceptPresentation props_GreaterExpression;
   private ConceptPresentation props_IElseStatement;
@@ -35,7 +35,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NumberLiteral;
   private ConceptPresentation props_Param;
   private ConceptPresentation props_ParensExpression;
-  private ConceptPresentation props_SoSeWorksheet;
   private ConceptPresentation props_Statement;
   private ConceptPresentation props_SubtractStatement;
   private ConceptPresentation props_Type;
@@ -43,6 +42,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VariableDeclaration;
   private ConceptPresentation props_VariableReference;
   private ConceptPresentation props_WhileStatement;
+  private ConceptPresentation props_Worksheet;
 
   @Override
   @Nullable
@@ -140,13 +140,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ForStatement = cpb.create();
         }
         return props_ForStatement;
-      case LanguageConceptSwitch.Function:
-        if (props_Function == null) {
+      case LanguageConceptSwitch.FunctionStatement:
+        if (props_FunctionStatement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_Function = cpb.create();
+          props_FunctionStatement = cpb.create();
         }
-        return props_Function;
+        return props_FunctionStatement;
       case LanguageConceptSwitch.GreaterEqualExpression:
         if (props_GreaterEqualExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -229,13 +229,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ParensExpression = cpb.create();
         }
         return props_ParensExpression;
-      case LanguageConceptSwitch.SoSeWorksheet:
-        if (props_SoSeWorksheet == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_SoSeWorksheet = cpb.create();
-        }
-        return props_SoSeWorksheet;
       case LanguageConceptSwitch.Statement:
         if (props_Statement == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -252,7 +245,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Type:
         if (props_Type == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("type");
+          cpb.rawPresentation("T");
           props_Type = cpb.create();
         }
         return props_Type;
@@ -284,6 +277,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_WhileStatement = cpb.create();
         }
         return props_WhileStatement;
+      case LanguageConceptSwitch.Worksheet:
+        if (props_Worksheet == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Worksheet = cpb.create();
+        }
+        return props_Worksheet;
     }
     return null;
   }

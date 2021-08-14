@@ -12,7 +12,7 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BaseConstraintsAspectDescriptor" />
   </dependency>
   <dependency className="SoSeL21.constraints.VariableReference_Constraints">
-    <classNode dependClassName="SoSeL21.behavior.SoSeWorksheet__BehaviorDescriptor" />
+    <classNode dependClassName="SoSeL21.behavior.Worksheet__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />

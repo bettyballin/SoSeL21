@@ -74,11 +74,10 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     editorCell.addEditorCell(createComponent_0());
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createRefNode_0());
-    editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNode_1());
-    editorCell.addEditorCell(createConstant_2());
+    editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNode_2());
-    editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createConstant_2());
     return editorCell;
   }
   private EditorCell createComponent_0() {
@@ -146,21 +145,15 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return "<no var>";
     }
   }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ";");
-    editorCell.setCellId("Constant_l9yc2b_d0a");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new condSingleRoleHandler_l9yc2b_e0a(myNode, LINKS.cond$9ST8, getEditorContext());
+    SingleRoleCellProvider provider = new condSingleRoleHandler_l9yc2b_d0a(myNode, LINKS.cond$9ST8, getEditorContext());
     return provider.createCell();
   }
-  private static class condSingleRoleHandler_l9yc2b_e0a extends SingleRoleCellProvider {
+  private static class condSingleRoleHandler_l9yc2b_d0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public condSingleRoleHandler_l9yc2b_e0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public condSingleRoleHandler_l9yc2b_d0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -207,21 +200,21 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return "<no cond>";
     }
   }
-  private EditorCell createConstant_2() {
+  private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ";");
-    editorCell.setCellId("Constant_l9yc2b_f0a");
+    editorCell.setCellId("Constant_l9yc2b_e0a");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_2() {
-    SingleRoleCellProvider provider = new counterSingleRoleHandler_l9yc2b_g0a(myNode, LINKS.counter$9TAb, getEditorContext());
+    SingleRoleCellProvider provider = new counterSingleRoleHandler_l9yc2b_f0a(myNode, LINKS.counter$9TAb, getEditorContext());
     return provider.createCell();
   }
-  private static class counterSingleRoleHandler_l9yc2b_g0a extends SingleRoleCellProvider {
+  private static class counterSingleRoleHandler_l9yc2b_f0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public counterSingleRoleHandler_l9yc2b_g0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public counterSingleRoleHandler_l9yc2b_f0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -268,9 +261,9 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return "<no counter>";
     }
   }
-  private EditorCell createConstant_3() {
+  private EditorCell createConstant_2() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "){");
-    editorCell.setCellId("Constant_l9yc2b_h0a");
+    editorCell.setCellId("Constant_l9yc2b_g0a");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -371,11 +364,11 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_4());
+    editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createReadOnlyModelAccessor_0());
     return editorCell;
   }
-  private EditorCell createConstant_4() {
+  private EditorCell createConstant_3() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "}");
     editorCell.setCellId("Constant_l9yc2b_a2a");
     editorCell.setDefaultText("");
