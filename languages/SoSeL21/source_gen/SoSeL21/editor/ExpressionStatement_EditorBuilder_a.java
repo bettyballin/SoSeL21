@@ -30,8 +30,8 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 /*package*/ class ExpressionStatement_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -119,7 +119,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createReadOnlyModelAccessor_0() {
     EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new ModelAccessor.ReadOnly() {
       public String getText() {
-        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.IfStatement$tK) || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.IElseStatement$sy)) {
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.IfStatement$tK) || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.IElseStatement$sy) || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.WhileStatement$c7) || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(SNodeOperations.getConcept(SNodeOperations.getParent(myNode))), CONCEPTS.ForStatement$4F)) {
           return "";
         }
         String eval = "value: ";
@@ -145,7 +145,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IElseStatement$sy = MetaAdapterFactory.getInterfaceConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x6a52f87ccbfc3d36L, "SoSeL21.structure.IElseStatement");
+    /*package*/ static final SConcept ForStatement$4F = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x658915633179ff0dL, "SoSeL21.structure.ForStatement");
     /*package*/ static final SConcept IfStatement$tK = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3d238acb0c8da65eL, "SoSeL21.structure.IfStatement");
+    /*package*/ static final SInterfaceConcept IElseStatement$sy = MetaAdapterFactory.getInterfaceConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x6a52f87ccbfc3d36L, "SoSeL21.structure.IElseStatement");
+    /*package*/ static final SConcept WhileStatement$c7 = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, "SoSeL21.structure.WhileStatement");
   }
 }

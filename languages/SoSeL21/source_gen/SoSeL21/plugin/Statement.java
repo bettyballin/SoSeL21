@@ -94,6 +94,16 @@ public class Statement {
         Statement s = new Statement(i);
         String val = s.getResult();
         ListSequence.fromList(results).addElement(val);
+      } else if (SNodeOperations.getConcept(b).getConceptAlias() == "while") {
+        SNode w = (SNode) b;
+        Statement s = new Statement(w);
+        String val = s.getResult();
+        ListSequence.fromList(results).addElement(val);
+      } else if (SNodeOperations.getConcept(b).getConceptAlias() == "for") {
+        SNode f = (SNode) b;
+        Statement s = new Statement(f);
+        String val = s.getResult();
+        ListSequence.fromList(results).addElement(val);
       }
     }
   }

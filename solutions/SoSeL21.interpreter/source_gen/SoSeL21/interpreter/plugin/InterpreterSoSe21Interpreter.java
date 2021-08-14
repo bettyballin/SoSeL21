@@ -150,6 +150,36 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.FunctionStatement$JD, "r:17b3d5c1-9762-4072-81cd-8ef415e4e367(SoSeL21.interpreter.plugin)/8640451594365744566", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          Statement s = new Statement(node);
+          return s.getResult();
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("fun()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("FunctionStatement");
+      }
+
+      @Override
+      public String toString() {
+        return "FunctionStatement";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
   }
 
 
@@ -166,5 +196,6 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
     /*package*/ static final SInterfaceConcept MyExpression$hK = MetaAdapterFactory.getInterfaceConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x17b38e97ea5d2c32L, "SoSeL21.structure.MyExpression");
     /*package*/ static final SConcept WhileStatement$c7 = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563316baffbL, "SoSeL21.structure.WhileStatement");
     /*package*/ static final SConcept ForStatement$4F = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x658915633179ff0dL, "SoSeL21.structure.ForStatement");
+    /*package*/ static final SConcept FunctionStatement$JD = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x65891563317a04c6L, "SoSeL21.structure.FunctionStatement");
   }
 }

@@ -9,7 +9,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,31,0" name="SoSeL21.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,29,0" name="SoSeL21.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:99d82953-5361-4d9a-bd61-a71f8e5f74d9(SoSeL21.constraints)/314389951432017689">
@@ -57,47 +57,6 @@
       <unit id="6747461043357705821" at="40,19,49,9" name="SoSeL21.constraints.VariableReference_Constraints$1$1" />
       <unit id="6747461043357705821" at="32,48,51,5" name="SoSeL21.constraints.VariableReference_Constraints$1" />
       <unit id="314389951432017689" at="25,0,69,0" name="SoSeL21.constraints.VariableReference_Constraints" />
-    </file>
-  </root>
-  <root nodeRef="r:99d82953-5361-4d9a-bd61-a71f8e5f74d9(SoSeL21.constraints)/5158053778686481910">
-    <file name="FunctionStatement_Constraints.java">
-      <node id="5158053778686481910" at="30,0,31,0" concept="5" trace="LOG" />
-      <node id="5158053778686481910" at="31,42,32,41" concept="6" />
-      <node id="5158053778686481910" at="42,63,43,56" concept="4" />
-      <node id="5158053778686482786" at="46,80,47,144" concept="1" />
-      <node id="5158053778686484555" at="47,144,48,239" concept="4" />
-      <node id="5158053778686481910" at="54,0,55,0" concept="5" trace="breakingNode_aawl5j_a0a0a0a0a0a0a0a2" />
-      <node id="5158053778686481910" at="57,0,58,0" concept="5" trace="FunctionStatement$JD" />
-      <node id="5158053778686481910" at="58,0,59,0" concept="5" trace="Worksheet$ly" />
-      <node id="5158053778686481910" at="59,0,60,0" concept="5" trace="Statement$k5" />
-      <node id="5158053778686481910" at="63,0,64,0" concept="5" trace="body$K0QA" />
-      <node id="5158053778686481910" at="31,0,34,0" concept="0" trace="FunctionStatement_Constraints#()V" />
-      <node id="5158053778686481910" at="41,0,45,0" concept="2" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="5158053778686481910" at="45,0,50,0" concept="2" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="5158053778686481910" at="39,152,50,10" concept="4" />
-      <node id="5158053778686481910" at="38,0,52,0" concept="2" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_DefaultScopeProvider;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="5158053778686481910" at="36,127,52,6" concept="4" />
-      <node id="5158053778686481910" at="35,0,54,0" concept="2" trace="calculateDefaultScopeConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="5158053778686481910" at="31,42,32,41" />
-      <scope id="5158053778686481910" at="42,63,43,56" />
-      <scope id="5158053778686481910" at="46,80,48,239" />
-      <scope id="5158053778686481910" at="31,0,34,0" />
-      <scope id="5158053778686481910" at="41,0,45,0" />
-      <scope id="5158053778686481910" at="45,0,50,0">
-        <var name="_context" id="5158053778686481910" />
-      </scope>
-      <scope id="5158053778686481910" at="39,152,50,10" />
-      <scope id="5158053778686481910" at="38,0,52,0">
-        <var name="checkingNodeContext" id="5158053778686481910" />
-        <var name="context" id="5158053778686481910" />
-      </scope>
-      <scope id="5158053778686481910" at="36,127,52,6" />
-      <scope id="5158053778686481910" at="35,0,54,0" />
-      <unit id="5158053778686481910" at="62,0,65,0" name="SoSeL21.constraints.FunctionStatement_Constraints$LINKS" />
-      <unit id="5158053778686481910" at="56,0,61,0" name="SoSeL21.constraints.FunctionStatement_Constraints$CONCEPTS" />
-      <unit id="5158053778686481910" at="40,19,50,9" name="SoSeL21.constraints.FunctionStatement_Constraints$1$1" />
-      <unit id="5158053778686481910" at="37,15,52,5" name="SoSeL21.constraints.FunctionStatement_Constraints$1" />
-      <unit id="5158053778686481910" at="29,0,66,0" name="SoSeL21.constraints.FunctionStatement_Constraints" />
     </file>
   </root>
 </debug-info>
