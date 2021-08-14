@@ -410,5 +410,87 @@
       <ref role="1YaFvo" to="tr2z:3OzyGGcA6lJ" resolve="ElseIfStatement" />
     </node>
   </node>
+  <node concept="18kY7G" id="7vD3f8HaFZg">
+    <property role="TrG5h" value="check_WhileStatement" />
+    <node concept="3clFbS" id="7vD3f8HaFZh" role="18ibNy">
+      <node concept="3clFbJ" id="7vD3f8HaFZi" role="3cqZAp">
+        <node concept="3clFbS" id="7vD3f8HaFZj" role="3clFbx">
+          <node concept="2MkqsV" id="7vD3f8HaFZk" role="3cqZAp">
+            <node concept="Xl_RD" id="7vD3f8HaFZl" role="2MkJ7o">
+              <property role="Xl_RC" value="Not a valid condition " />
+            </node>
+            <node concept="1YBJjd" id="7vD3f8HaFZm" role="1urrMF">
+              <ref role="1YBMHb" node="7vD3f8HaFZw" resolve="w" />
+            </node>
+          </node>
+        </node>
+        <node concept="3fqX7Q" id="7vD3f8HaFZn" role="3clFbw">
+          <node concept="2OqwBi" id="7vD3f8HaFZo" role="3fr31v">
+            <node concept="2OqwBi" id="7vD3f8HaFZp" role="2Oq$k0">
+              <node concept="2OqwBi" id="7vD3f8HaFZq" role="2Oq$k0">
+                <node concept="1YBJjd" id="7vD3f8HaFZr" role="2Oq$k0">
+                  <ref role="1YBMHb" node="7vD3f8HaFZw" resolve="w" />
+                </node>
+                <node concept="3TrEf2" id="7vD3f8HaNCN" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tr2z:6m95mcLqVdC" resolve="cond" />
+                </node>
+              </node>
+              <node concept="2yIwOk" id="7vD3f8HaFZt" role="2OqNvi" />
+            </node>
+            <node concept="2Zo12i" id="7vD3f8HaFZu" role="2OqNvi">
+              <node concept="chp4Y" id="7vD3f8HaFZv" role="2Zo12j">
+                <ref role="cht4Q" to="tr2z:7Ycm1g_j5uR" resolve="BinaryComparisonExpression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7vD3f8HaFZw" role="1YuTPh">
+      <property role="TrG5h" value="w" />
+      <ref role="1YaFvo" to="tr2z:6m95mcLqUZV" resolve="WhileStatement" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="7vD3f8HaG9U">
+    <property role="TrG5h" value="check_ForStatement" />
+    <node concept="3clFbS" id="7vD3f8HaG9V" role="18ibNy">
+      <node concept="3clFbJ" id="7vD3f8HaG9W" role="3cqZAp">
+        <node concept="3clFbS" id="7vD3f8HaG9X" role="3clFbx">
+          <node concept="2MkqsV" id="7vD3f8HaG9Y" role="3cqZAp">
+            <node concept="Xl_RD" id="7vD3f8HaG9Z" role="2MkJ7o">
+              <property role="Xl_RC" value="Not a valid condition " />
+            </node>
+            <node concept="1YBJjd" id="7vD3f8HaGa0" role="1urrMF">
+              <ref role="1YBMHb" node="7vD3f8HaGaa" resolve="f" />
+            </node>
+          </node>
+        </node>
+        <node concept="3fqX7Q" id="7vD3f8HaGa1" role="3clFbw">
+          <node concept="2OqwBi" id="7vD3f8HaGa2" role="3fr31v">
+            <node concept="2OqwBi" id="7vD3f8HaGa3" role="2Oq$k0">
+              <node concept="2OqwBi" id="7vD3f8HaGa4" role="2Oq$k0">
+                <node concept="1YBJjd" id="7vD3f8HaGa5" role="2Oq$k0">
+                  <ref role="1YBMHb" node="7vD3f8HaGaa" resolve="f" />
+                </node>
+                <node concept="3TrEf2" id="7vD3f8HaNZC" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tr2z:6m95mcLuvWi" resolve="cond" />
+                </node>
+              </node>
+              <node concept="2yIwOk" id="7vD3f8HaGa7" role="2OqNvi" />
+            </node>
+            <node concept="2Zo12i" id="7vD3f8HaGa8" role="2OqNvi">
+              <node concept="chp4Y" id="7vD3f8HaGa9" role="2Zo12j">
+                <ref role="cht4Q" to="tr2z:7Ycm1g_j5uR" resolve="BinaryComparisonExpression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7vD3f8HaGaa" role="1YuTPh">
+      <property role="TrG5h" value="f" />
+      <ref role="1YaFvo" to="tr2z:6m95mcLuvWd" resolve="ForStatement" />
+    </node>
+  </node>
 </model>
 
