@@ -16,7 +16,6 @@
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="tr2z" ref="r:41356c12-1c7b-423e-808b-cd90289b00e7(SoSeL21.structure)" implicit="true" />
-    <import index="ubl4" ref="r:137866b5-5cd8-43ea-94f1-018dbc1dd9fa(SoSeL21.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -60,10 +59,15 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
-      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
+        <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
+      </concept>
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
+      <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
+        <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
     </language>
   </registry>
@@ -77,19 +81,26 @@
             <node concept="2YIFZM" id="hsVZV04Dzy" role="3clFbG">
               <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
               <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
-              <node concept="2OqwBi" id="hsVZV04Dzz" role="37wK5m">
-                <node concept="2OqwBi" id="hsVZV04Dz$" role="2Oq$k0">
-                  <node concept="2rP1CM" id="hsVZV04Dz_" role="2Oq$k0" />
-                  <node concept="2Xjw5R" id="hsVZV04DzA" role="2OqNvi">
-                    <node concept="1xMEDy" id="hsVZV04DzB" role="1xVPHs">
-                      <node concept="chp4Y" id="hsVZV04DzC" role="ri$Ld">
-                        <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
+              <node concept="2OqwBi" id="4ul5DlaOj76" role="37wK5m">
+                <node concept="2OqwBi" id="hsVZV04Dzz" role="2Oq$k0">
+                  <node concept="2OqwBi" id="hsVZV04Dz$" role="2Oq$k0">
+                    <node concept="2rP1CM" id="hsVZV04Dz_" role="2Oq$k0" />
+                    <node concept="2Xjw5R" id="hsVZV04DzA" role="2OqNvi">
+                      <node concept="1xMEDy" id="hsVZV04DzB" role="1xVPHs">
+                        <node concept="chp4Y" id="hsVZV04DzC" role="ri$Ld">
+                          <ref role="cht4Q" to="tr2z:3kSO7WaLl8R" resolve="Worksheet" />
+                        </node>
                       </node>
                     </node>
                   </node>
+                  <node concept="3Tsc0h" id="4ul5DlaOhJs" role="2OqNvi">
+                    <ref role="3TtcxE" to="tr2z:3kSO7WaLl8U" resolve="body" />
+                  </node>
                 </node>
-                <node concept="2qgKlT" id="6m95mcM2$W4" role="2OqNvi">
-                  <ref role="37wK5l" to="ubl4:2DJNjyWk4$y" resolve="stmts" />
+                <node concept="v3k3i" id="4ul5DlaOkwf" role="2OqNvi">
+                  <node concept="chp4Y" id="4ul5DlaOkAd" role="v3oSu">
+                    <ref role="cht4Q" to="tr2z:7Ycm1g_j5wF" resolve="VariableDeclaration" />
+                  </node>
                 </node>
               </node>
             </node>

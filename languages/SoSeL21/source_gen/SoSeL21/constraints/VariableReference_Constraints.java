@@ -14,12 +14,13 @@ import org.jetbrains.mps.openapi.model.SNodeReference;
 import jetbrains.mps.scope.Scope;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
 import jetbrains.mps.scope.ListScope;
-import SoSeL21.behavior.Worksheet__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.util.HashMap;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class VariableReference_Constraints extends BaseConstraintsDescriptor {
   public VariableReference_Constraints() {
@@ -43,7 +44,7 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
           }
           @Override
           public Scope createScope(final ReferenceConstraintsContext _context) {
-            return ListScope.forNamedElements(Worksheet__BehaviorDescriptor.stmts_id2DJNjyWk4$y.invoke(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.Worksheet$ly, false, false)));
+            return ListScope.forNamedElements(SNodeOperations.ofConcept(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.Worksheet$ly, false, false), LINKS.body$K0QA), CONCEPTS.VariableDeclaration$j6));
           }
         };
       }
@@ -57,9 +58,11 @@ public class VariableReference_Constraints extends BaseConstraintsDescriptor {
   private static final class CONCEPTS {
     /*package*/ static final SConcept VariableReference$ds = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac5551eL, "SoSeL21.structure.VariableReference");
     /*package*/ static final SConcept Worksheet$ly = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, "SoSeL21.structure.Worksheet");
+    /*package*/ static final SConcept VariableDeclaration$j6 = MetaAdapterFactory.getConcept(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x7f8c5814254c582bL, "SoSeL21.structure.VariableDeclaration");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink target$tH9_ = MetaAdapterFactory.getReferenceLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac5551eL, 0x3538d07f0ac55607L, "target");
+    /*package*/ static final SContainmentLink body$K0QA = MetaAdapterFactory.getContainmentLink(0x525ac69d02684eb4L, 0x9478ecf995bf5927L, 0x3538d07f0ac55237L, 0x3538d07f0ac5523aL, "body");
   }
 }
